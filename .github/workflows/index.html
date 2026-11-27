@@ -257,10 +257,11 @@
       <option value="ALL">All Items</option>
       <option value="DEALS_ONLY">Active Deals Only</option>
     </select>
-    <select id="sortSelect" onchange="renderTable()">
-      <option value="saleAsc">Sort: Lowest Sale Price</option>
-      <option value="discDesc">Sort: Biggest % Off</option>
-      <option value="brandAsc">Sort: Brand (A–Z)</option>
+    <select id="sortBy" onchange="renderTable()">
+      <option value="PRICE_ASC">Price: Low to High</option>
+      <option value="PRICE_DESC">Price: High to Low</option>
+      <option value="DISCOUNT_DESC">Biggest % Off</option>
+      <option value="BRAND_ASC">Brand: A–Z</option>
     </select>
   </div>
 
@@ -269,39 +270,41 @@
       <thead>
         <tr>
           <th>Brand &amp; Tier</th>
-          <th>Product Size</th>
-          <th>Dispensary / Menu</th>
-          <th>Sale vs. Reg Price</th>
-          <th>Savings</th>
-          <th>Active Deal / Promo</th>
+          <th>Featured Strain</th>
+          <th>Dispensary / Region</th>
+          <th>3.5g Price</th>
+          <th>Active Promo</th>
         </tr>
       </thead>
-      <tbody id="trackerBody"></tbody>
+      <tbody id="priceTableBody">
+        <tr><td colspan="5" style="text-align:center; color:var(--muted); padding:24px;">Loading prices.json...</td></tr>
+      </tbody>
     </table>
   </div>
 
   <div class="feed-bar">
-    <span id="feedSourceLabel">Feed: Using built-in NJ baseline data (Click "Connect GitHub Feed" to stream automated prices.json)</span>
-    <span>Prices shown pre-tax (excludes NJ 6.625% sales tax &amp; up to 2% municipal tax).</span>
+    <span id="feedSourceLabel">Source: ./prices.json</span>
+    <span>21+ Only • Prices reflect pre-tax 3.5g dispensary listings</span>
   </div>
 </div>
 
-<!-- GitHub Feed Config Modal -->
 <div class="modal-backdrop" id="feedModal">
   <div class="modal">
-    <h2>Connect Your Automated GitHub JSON Feed</h2>
-    <p>
-      Paste your raw GitHub <code>prices.json</code> URL below. Example:<br>
-      <code>https://githubusercontent.com</code>
-    </p>
-    <input type="url" id="feedUrlInput" placeholder="https://githubusercontent.com...">
+    <h2>Connect Custom JSON Feed</h2>
+    <p>By default, this page loads <code>./prices.json</code> from your repository. You can also paste a raw GitHub JSON URL below to override it.</p>
+    <input type="text" id="feedUrlInput" placeholder="./prices.json">
     <div class="modal-actions">
-      <button class="btn" onclick="resetFeedUrl()">Reset to Baseline</button>
       <button class="btn" onclick="closeFeedModal()">Cancel</button>
-      <button class="btn btn-primary" onclick="saveFeedUrl()">Save &amp; Stream Live</button>
+      <button class="btn btn-primary" onclick="saveFeedUrl()">Save &amp; Sync</button>
     </div>
   </div>
 </div>
 
 <script>
-  // Optional: Paste your raw GitHub prices.json URL inside the quotes below to hardcode it permanently
+  let items = [];
+  let feedUrl = localStorage.getItem('nj_tracker_feed') || './prices.json';
+
+  function openFeedModal() {
+    document.getElementById('feedUrlInput').value = feedUrl;
+    document.getElementById('feedModal').style.display = 'flex';
+  }
