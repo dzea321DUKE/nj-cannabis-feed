@@ -1,0 +1,25 @@
+{
+  "lastUpdated": "Nov 27, 2026 • 3:48 PM",
+  "items": [
+    { "brand": "Garden Greens", "tier": "Craft / Small-Batch", "strain": "Z Pie (3.5g)", "dispensary": "NJ Leaf (Freehold)", "regPrice": 60, "salePrice": 48, "promo": "20% Off Storewide" },
+    { "brand": "Clade9", "tier": "Craft / Small-Batch", "strain": "Diamond Bar (3.5g)", "dispensary": "Hashery (Hackensack)", "regPrice": 60, "salePrice": 45, "promo": "25% Off Craft Flower" },
+    { "brand": "Hamilton Farms", "tier": "Craft / Small-Batch", "strain": "Night Charmer (3.5g)", "dispensary": "Molly Ann Farms (Haledon)", "regPrice": 60, "salePrice": 51, "promo": "15% Off NJ Craft" },
+    { "brand": "Brighterside Farms", "tier": "Craft / Small-Batch", "strain": "GH1 (3.5g)", "dispensary": "SoulFlora (West Milford)", "regPrice": 65, "salePrice": 52, "promo": "20% Off Living Soil" },
+    { "brand": "Full Tilt Labs", "tier": "Craft / Small-Batch", "strain": "Frost Donkey (3.5g)", "dispensary": "Urb'n Dispensary (Newark)", "regPrice": 65, "salePrice": 65, "promo": "Regular menu price" },
+    { "brand": "EV Cultivation", "tier": "Craft / Small-Batch", "strain": "Super Boof (3.5g)", "dispensary": "Blue Oak (Bloomfield)", "regPrice": 60, "salePrice": 48, "promo": "20% Off Weekend Deal" },
+    { "brand": "Breakwater", "tier": "Craft / Small-Batch", "strain": "Kush IV (3.5g)", "dispensary": "Breakwater (Cranbury)", "regPrice": 56, "salePrice": 56, "promo": "Medical / Small-Batch" },
+    { "brand": "Illicit Gardens", "tier": "Premium", "strain": "Ghost OG (3.5g)", "dispensary": "Design 710 (Atlantic City)", "regPrice": 55, "salePrice": 44, "promo": "20% Off Flower" },
+    { "brand": "Cookies", "tier": "Premium", "strain": "Gary Payton (3.5g)", "dispensary": "Cookies (Harrison)", "regPrice": 60, "salePrice": 48, "promo": "20% Off Select Eighths" },
+    { "brand": "Gage", "tier": "Premium", "strain": "Ether OG (3.5g)", "dispensary": "Apothecarium (Maplewood)", "regPrice": 60, "salePrice": 45, "promo": "25% Off Apothecarium" },
+    { "brand": "Kind Tree", "tier": "Premium", "strain": "Filthy Animals (3.5g)", "dispensary": "Apothecarium (Lodi)", "regPrice": 55, "salePrice": 38.50, "promo": "30% Off Tier Deal" },
+    { "brand": "Rythm", "tier": "Premium", "strain": "Animal Face (3.5g)", "dispensary": "RISE (Paramus)", "regPrice": 60, "salePrice": 45, "promo": "25% Off GTI Brands" },
+    { "brand": "Verano Reserve", "tier": "Premium", "strain": "Sunshine OG (3.5g)", "dispensary": "Zen Leaf (Elizabeth)", "regPrice": 60, "salePrice": 48, "promo": "20% Off Verano" },
+    { "brand": "Crops", "tier": "Premium", "strain": "Lime OG (3.5g)", "dispensary": "Bloc (Somerset)", "regPrice": 55, "salePrice": 41.25, "promo": "25% Off Crops Flower" },
+    { "brand": "Hillview Farms", "tier": "Craft / Small-Batch", "strain": "Apple Fritter (3.5g)", "dispensary": "Honey Grove (Clementon)", "regPrice": 60, "salePrice": 48, "promo": "20% Off Local Craft" },
+    { "brand": "Grassroots", "tier": "Mid-Tier / Everyday", "strain": "Garlic Cookies (3.5g)", "dispensary": "Curaleaf (Bellmawr)", "regPrice": 50, "salePrice": 35, "promo": "30% Off Eighths" },
+    { "brand": "Anthologie", "tier": "Mid-Tier / Everyday", "strain": "Slapz (3.5g)", "dispensary": "MPX NJ (Gloucester)", "regPrice": 50, "salePrice": 37.50, "promo": "25% Off House Flower" },
+    { "brand": "Legend", "tier": "Mid-Tier / Everyday", "strain": "OG Kush (3.5g)", "dispensary": "Valley Wellness (Raritan)", "regPrice": 45, "salePrice": 36, "promo": "20% Off Everyday Value" },
+    { "brand": "Simply Herb", "tier": "Mid-Tier / Everyday", "strain": "Mandarin Zkittlez (3.5g)", "dispensary": "Ascend (Rochelle Park)", "regPrice": 40, "salePrice": 32, "promo": "20% Off Ascend Brands" },
+    { "brand": "Ozone", "tier": "Mid-Tier / Everyday", "strain": "Butterstuff (3.5g)", "dispensary": "Ascend (Fort Lee)", "regPrice": 45, "salePrice": 36, "promo": "20% Off Select Flower" }
+  ]
+}
