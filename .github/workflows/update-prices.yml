@@ -1,0 +1,37 @@
+yaml
+name: Update NJ Cannabis Prices
+
+on:
+  schedule:
+    - cron: '0 */4 * * *' # Runs automatically every 4 hours
+  workflow_dispatch:      # Lets you click a "Run" button manually anytime
+
+permissions:
+  contents: write
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Playwright
+        run: |
+          pip install playwright
+          playwright install chromium
+
+      - name: Run price collector
+        run: python scraper.py
+
+      - name: Save updated prices.json
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Price Bot"
+          git add prices.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update prices" && git push)
